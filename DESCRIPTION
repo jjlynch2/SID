@@ -1,0 +1,27 @@
+Package: SID
+Title: Stature Identification
+Version: 0.0.1
+Authors@R: person("Jeff", "Lynch", email = "jjlynch@bioarch.net", role = c("aut","cre"))
+Description: This package provides stature estimation and association for human skeletal remains
+Depends:
+    R (>= 4.4.0),
+    shiny,
+    ggplot2,
+    dplyr,
+    shinyalert,
+    shinyBS,
+    DT,
+    gridExtra,
+    ggpubr
+License: GPL-2
+LazyData: true
+ByteCompile: true
+Imports:
+    shiny,
+    ggplot2,
+    dplyr,
+    shinyalert,
+    shinyBS,
+    DT,
+    gridExtra,
+    ggpubr
