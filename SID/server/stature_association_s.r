@@ -73,7 +73,7 @@ observeEvent(input$stature_associate_as, {
 
     #data table output
     output$table_as <- DT::renderDataTable({
-        DT::datatable(results_as[[2]], options = list(dom = 't', pageLength = 1, rownames = FALSE))
+        DT::datatable(results_as[[2]], selection = 'none', options = list(dom = 't', pageLength = 1), rownames = FALSE)
     })
 
     #generate table of results for pdf
@@ -85,7 +85,7 @@ observeEvent(input$stature_associate_as, {
     })
 
     #generate table of parameters for pdf
-    df_params_as <- cbind(data.frame(Version = paste(packageVersion("SID")), Date = Sys.time(), Case_ID = input$case_id_as, Analyst = input$analyst_as, Prediction_Interval = input$prediction_interval_as, Stature_Metric = input$metric_as), case_data_as)
+    df_params_as <- cbind(data.frame(Version = SID_Version, Date = Sys.time(), Case_ID = input$case_id_as, Analyst = input$analyst_as, Prediction_Interval = input$prediction_interval_as, Stature_Metric = input$metric_as), case_data_as)
     pdf_as$params <- ggtexttable(t(df_params_as), theme = ttheme("mBlue"))
 
     output$save_results_as <- downloadHandler(

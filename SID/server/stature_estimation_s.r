@@ -51,7 +51,7 @@ observeEvent(input$stature_estimate_se, {
     })
 
     #generate table of parameters for pdf
-    df_params_se <- data.frame(Version = paste(packageVersion("SID")), Date = Sys.time(), Case_ID = input$case_id_se, Analyst = input$analyst_se, Reference_Data = paste(input$reference_select_se, collapse = ", "),Prediction_Interval = input$prediction_interval_se, Stature_Metric = input$metric_se, Hum_01 = input$Hum_01_se, Uln_01 = input$Uln_01_se, Rad_01 = input$Rad_01_se, Fem_01 = input$Fem_01_se, Fem_02 = input$Fem_02_se, Tib_01 = input$Tib_01_se, Fib_01 = input$Fib_01_se)
+    df_params_se <- data.frame(Version = SID_Version, Date = Sys.time(), Case_ID = input$case_id_se, Analyst = input$analyst_se, Reference_Data = paste(input$reference_select_se, collapse = ", "),Prediction_Interval = input$prediction_interval_se, Stature_Metric = input$metric_se, Hum_01 = input$Hum_01_se, Uln_01 = input$Uln_01_se, Rad_01 = input$Rad_01_se, Fem_01 = input$Fem_01_se, Fem_02 = input$Fem_02_se, Tib_01 = input$Tib_01_se, Fib_01 = input$Fib_01_se)
     pdf_se$params <- ggtexttable(t(df_params_se), theme = ttheme("mBlue"))
 
     output$save_results_se <- downloadHandler(
