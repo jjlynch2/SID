@@ -4,9 +4,9 @@
 
 ## Installation
 ```sh
-git clone https://github.com/SID
+git clone https://github.com/jjlynch2/SID
 docker build -t statureid .
-docker run -d -p 4002:3838 statureid
+docker run --restart=on-failure:10 -d -p 4002:3838 statureid
 ```
 
 ## R Dependencies
