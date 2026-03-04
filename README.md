@@ -1,31 +1,8 @@
-## SID (Stature Identification) 0.0.3
-
-## Changes
-
-## Installation
-```sh
-git clone https://github.com/jjlynch2/SID
-docker build -t statureid .
-docker run --restart=on-failure:10 -d -p 4002:3838 statureid
-```
-
-## R Dependencies
-* shiny
-* ggplot2
-* shinyalert
-* dplyr
-* shinyBS
-* gridExtra
-* ggpubr
-* DT
-
-## Citation
-Lynch, J.J. 2025 SID. Stature Identification. Version 0.0.3. Defense POW/MIA Accounting Agency, Offutt AFB, NE.
-
-## TODO
-1. Add all reference data
-2. Verify how to sum the measurements for association. is it log sum?
-3. Reports need better formatting when using multiple reference sets its out of bounds in the pdf
-4. Should stature estimation allow selection of side? We likely don't have enough data yet.
-5. Do we need batch processing?
-6. Bootstrapping option for smaller samples.
+# SID — Stature Identification
+> **⚠️ This repository has moved.**
+>
+> SID is now maintained under the DPAA organization:
+>
+> **➡️ [github.com/dpaa-gov/SID](https://github.com/dpaa-gov/SID)**
+>
+> This repository is archived and will no longer receive updates. Please use the new repository for the latest version, issues, and contributions.
